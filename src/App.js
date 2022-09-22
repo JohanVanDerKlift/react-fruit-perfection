@@ -1,18 +1,34 @@
 import React from 'react';
+import citroenen from './assets/citroenen.jpeg';
+import limoenen from './assets/limoenen.png';
+import ijsblokjes from './assets/ijsblokjes.jpg';
+import { ReactComponent as ShoppingCart } from "./assets/winkelmandje.svg";
 import './App.css';
 
 function App() {
+    function logClick() {
+        console.log('You clicked!');
+    }
+
   return (
       <>
+          <nav>
+              <ul>
+                  <li><a href="/">Shop</a></li>
+                  <li><a href="/">Ons verhaal</a></li>
+                  <li><a href="/">Blog</a></li>
+              </ul>
+              <ShoppingCart className="shopping-cart-icon" />
+          </nav>
           <header>
               <h1>Fruit perfection</h1>
-              <button type="button">Shop nu</button>
+              <button type="button" onClick={logClick}>Shop nu</button>
           </header>
           <main>
               <article className="product">
                   <img
-                      src="https://www.ahealthylife.nl/wp-content/uploads/2017/06/citroen_voedingswaarde-768x729.jpg"
-                      alt="citroen"
+                      src={citroenen}
+                      alt="citroenen"
                   />
                   <h2 className="product-name">Citroen</h2>
                   <p className="product-description">Een citroen is voor de meeste mensen te zuur om zo uit de hand te eten. Van citroen kun je het
@@ -22,8 +38,8 @@ function App() {
               </article>
                 <article className="product">
                     <img
-                        src="https://www.ahealthylife.nl/wp-content/uploads/2017/06/citroen_voedingswaarde-768x729.jpg"
-                        alt="citroen"
+                        src={limoenen}
+                        alt="Limoenen"
                     />
                     <h2 className="product-name">Limoen</h2>
                     <p className="product-description">Limoen is familie van de citroen en de sinaasappel en behoort tot de
@@ -33,8 +49,8 @@ function App() {
                 </article>
                 <article className="product">
                     <img
-                        src="https://www.ahealthylife.nl/wp-content/uploads/2017/06/citroen_voedingswaarde-768x729.jpg"
-                        alt="citroen"
+                        src={ijsblokjes}
+                        alt="IJsblokjes"
                     />
                     <h2 className="product-name">IJsblokjes</h2>
                     <p className="product-description">Een ijsblokje of ijsklontje is bevroren water in de vorm van een klein
